@@ -6,7 +6,8 @@ import java.util.List;
 public class FindCommonPatients {
     public static <T> List<T> findCommonPatients(List<T> listA, List<T> listB) {
         List<T> result = new ArrayList<>();
-        for (T item : listA) {
+        for (int i = 0; i < listA.size(); i++) {
+            T item = listA.get(i);
             if (listB.contains(item) && !result.contains(item)) {
                 result.add(item);
             }
@@ -19,6 +20,7 @@ public class FindCommonPatients {
         khoaNoi.add(101);
         khoaNoi.add(102);
         khoaNoi.add(105);
+
         List<Integer> khoaNgoai = new ArrayList<>();
         khoaNgoai.add(102);
         khoaNgoai.add(105);
@@ -31,6 +33,7 @@ public class FindCommonPatients {
         bhytA.add("DN01");
         bhytA.add("DN02");
         bhytA.add("DN03");
+
         List<String> bhytB = new ArrayList<>();
         bhytB.add("DN02");
         bhytB.add("DN04");
